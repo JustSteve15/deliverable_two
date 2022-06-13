@@ -3,9 +3,10 @@ console.log(usersname);
 let hole = prompt ("Would you like to play 3 or 6 holes of golf?");
 console.log(hole)
 let total = 0;
+let par = Number()
 
 if (hole === "3") {
-    let par = Number( prompt ("How many putts in hole 1?"));
+    par = Number( prompt ("How many putts in hole 1?"));
     console.log("Number of putts" ,par)
     total += par
     par = Number( prompt ("How many putts in hole 2?"));
@@ -38,11 +39,12 @@ if (hole === "3") {
   }
 
 if(total > 0) {
-    console.log(`Nice try ${usersname}. Your total par was: +(par).`);
+    console.log(`Nice try ${usersname}. Your total par was: +(${par}).`);
+    total += par
 }
 
 if(total < 0) {
-    console.log(`Great job, ${usersname}! Your total par was: -(par).`)
+    console.log(`Great job, ${usersname}! Your total par was: -(${par}).`)
 }
 
 if(total ===0) {
